@@ -1,3 +1,52 @@
+[project]
+name = "py-pdf-parser"
+version = "0.13.0"
+# setup.py and LICENSE file differ, went with license file
+license = {file = "LICENSE"}
+description = "A tool to help extracting information from structured PDFs."
+authors = [
+    { name = "Jake Stockwin", email = "jstockwin@gmail.com"},
+]
+maintainers = [
+    { name = "Jacob Beck", email = "beckjake@gmail.com" },
+]
+readme = "README.md"
+dependencies = [
+    "pdfminer.six==20231228",
+    "docopt==0.6.2",
+    "wand==0.6.13",
+]
+requires-python = ">=3.12"
+
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "matplotlib==3.8.1",
+    "pillow==10.3.0",
+    "pyvoronoi==1.0.253",
+    "shapely==2.0.3",
+]
+test = [
+    "ddt==1.6.0",
+    "matplotlib==3.8.1",
+    "mock==4.0.3",
+    "nose==1.3.7",
+    "pillow==10.3.0",
+    "recommonmark==0.7.1",
+    "sphinx-autobuild==2021.3.14",
+    "sphinx-rtd-theme==1.0.0",
+    "Sphinx==5.2.3",
+]
+
+[project.urls]
+Repository = "https://github.com/beckjake/py-pdf-parser"
+Documentation = "https://py-pdf-parser.readthedocs.io/en/latest/"
+
+
 [tool.isort]
 profile = "black"
 known_typing = "typing"
